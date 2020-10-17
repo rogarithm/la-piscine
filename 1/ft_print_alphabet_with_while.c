@@ -6,7 +6,7 @@
 /*   By: sehukim <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/17 11:53:04 by sehukim           #+#    #+#             */
-/*   Updated: 2020/10/17 15:24:11 by sehukim          ###   ########.fr       */
+/*   Updated: 2020/10/17 15:26:21 by sehukim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,11 @@ int main()
 
 void ft_print_alphabet(void)
 {
-	char *c;
-	c = "abcdefghijklmnopqrstuvwxyz";
-	write(1, c, 26);
+	char ltr;
+
+	ltr = 97;
+	while(ltr <= 'z'){
+		write(1, &ltr, 1);
+		ltr = ltr + 1;
+		}
 }
