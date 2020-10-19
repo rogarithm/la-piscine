@@ -1,19 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_print_numbers.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sehukim <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/10/19 18:38:01 by sehukim           #+#    #+#             */
-/*   Updated: 2020/10/19 20:36:05 by sehukim          ###   ########.fr       */
+/*   Created: 2020/10/19 18:42:16 by sehukim           #+#    #+#             */
+/*   Updated: 2020/10/19 20:43:46 by sehukim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_print_reverse_alphabet(void);
+#include <unistd.h>
 
-int		main(void)
+void	ft_print_numbers(void)
 {
-	ft_print_reverse_alphabet();
-	return (0);
+	char *c;
+
+	c = "0123456789";
+	write(1, c, 10);
 }

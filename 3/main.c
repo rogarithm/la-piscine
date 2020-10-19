@@ -5,15 +5,15 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: sehukim <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/10/19 18:38:01 by sehukim           #+#    #+#             */
-/*   Updated: 2020/10/19 20:36:05 by sehukim          ###   ########.fr       */
+/*   Created: 2020/10/19 20:39:58 by sehukim           #+#    #+#             */
+/*   Updated: 2020/10/19 20:43:48 by sehukim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_print_reverse_alphabet(void);
+void	ft_print_numbers(void);
 
 int		main(void)
 {
-	ft_print_reverse_alphabet();
+	ft_print_numbers();
 	return (0);
 }
