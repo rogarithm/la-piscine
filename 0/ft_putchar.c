@@ -6,13 +6,13 @@
 /*   By: sh <sh@student.42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/15 21:04:48 by sh                #+#    #+#             */
-/*   Updated: 2020/10/17 15:13:31 by sehukim          ###   ########.fr       */
+/*   Updated: 2020/10/19 01:00:19 by sh               ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-void	ft_putchar(char c)
+void		ft_putchar(char c)
 {
 	write(1, &c, 1);
 }

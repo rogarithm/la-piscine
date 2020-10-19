@@ -5,14 +5,15 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: sh <marvin@42.fr>                          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/10/19 00:29:54 by sh                #+#    #+#             */
-/*   Updated: 2020/10/19 00:56:24 by sh               ###   ########.fr       */
+/*   Created: 2020/10/19 01:04:41 by sh                #+#    #+#             */
+/*   Updated: 2020/10/19 01:10:06 by sh               ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_putchar(char c);
+void	ft_print_alphabet(void);
 
 int		main(void)
 {
-	ft_putchar('z');
+	ft_print_alphabet();
+	return (0);
 }
