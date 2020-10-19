@@ -3,14 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sh <marvin@42.fr>                          +#+  +:+       +#+        */
+/*   By: sehukim <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/10/19 01:38:49 by sh                #+#    #+#             */
-/*   Updated: 2020/10/19 01:46:50 by sh               ###   ########.fr       */
+/*   Created: 2020/10/19 18:38:01 by sehukim           #+#    #+#             */
+/*   Updated: 2020/10/19 18:40:30 by sehukim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 void	ft_print_reverse_alphabaet(void);
 
-int	main(void)
-	{
+int		main(void)
+{
+	void ft_print_reverse_alphabet(void);
+
+	return (0);
+}

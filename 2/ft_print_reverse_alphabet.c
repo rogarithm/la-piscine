@@ -6,16 +6,16 @@
 /*   By: sh <marvin@42.fr>                          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/19 01:30:20 by sh                #+#    #+#             */
-/*   Updated: 2020/10/19 01:45:48 by sh               ###   ########.fr       */
+/*   Updated: 2020/10/19 18:40:35 by sehukim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
 void	ft_print_reverse_alphabet(void)
-	{
-		char *c;
+{
+	char *c;
 
-		c = "zyxwvutsrqponmlkjihgfedcba";
-		write(1, c, 26);
-	}
+	c = "zyxwvutsrqponmlkjihgfedcba";
+	write(1, c, 26);
+}
