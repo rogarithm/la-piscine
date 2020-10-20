@@ -6,7 +6,7 @@
 /*   By: sh <marvin@42.fr>                          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/20 18:22:18 by sh                #+#    #+#             */
-/*   Updated: 2020/10/20 18:56:35 by sh               ###   ########.fr       */
+/*   Updated: 2020/10/20 19:12:31 by sh               ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ void		ft_print_comb(void)
 	array_length = 3;
 	while ( counter < array_length )
 	{
-		write(1, a[counter], 1);
+		write(1, &a[counter], 1);
 		counter++;
 	}
 }

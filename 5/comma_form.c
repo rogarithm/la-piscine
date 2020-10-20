@@ -1,19 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   comma_form.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sh <marvin@42.fr>                          +#+  +:+       +#+        */
+/*   By: sehukim <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/10/20 18:23:32 by sh                #+#    #+#             */
-/*   Updated: 2020/10/20 22:48:30 by sh               ###   ########.fr       */
+/*   Created: 2020/10/17 11:53:04 by sehukim           #+#    #+#             */
+/*   Updated: 2020/10/20 23:08:49 by sh               ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void		ft_print_array_2(void);
+#include <unistd.h>
 
-int			main(void)
+void	ft_print_array_2(void)
 {
-	ft_print_array_2();
-	return (0);
+	char ltr;
+
+	ltr = 97;
+	while (ltr <= 'z')
+	{
+		if (ltr < 'z')
+		{
+			write(1, &ltr, 1);
+			ltr++;
+			write(1, ", ", 2);
+		}
+		else if (ltr == 'z')
+		{
+			write(1, &ltr, 1);
+			ltr++;
+		}
+	}
 }

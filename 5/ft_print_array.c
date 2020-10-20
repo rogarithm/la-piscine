@@ -1,19 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_print_array.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sh <marvin@42.fr>                          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/10/20 18:23:32 by sh                #+#    #+#             */
-/*   Updated: 2020/10/20 22:48:30 by sh               ###   ########.fr       */
+/*   Created: 2020/10/20 18:22:18 by sh                #+#    #+#             */
+/*   Updated: 2020/10/20 22:50:55 by sh               ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void		ft_print_array_2(void);
+#include	<unistd.h>
 
-int			main(void)
+void		ft_print_array(void)
 {
-	ft_print_array_2();
-	return (0);
+	char a[3];
+	int counter;
+	int length;
+
+	a[3] = { 'a', 'b', '/0' };
+	counter = 0;
+	length = 3;
+	while ( counter < length )
+	{
+		write(1, , 1);
+		write(1, ', ', 2);
+		counter++;
+	}
 }
