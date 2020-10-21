@@ -6,11 +6,19 @@
 /*   By: sehukim <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/21 22:26:07 by sehukim           #+#    #+#             */
-/*   Updated: 2020/10/21 22:26:51 by sehukim          ###   ########.fr       */
+/*   Updated: 2020/10/22 01:21:07 by sh               ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	main(void)
+void	ft_ultimate_ft(int **nbr);
+
+int		main(void)
 {
-	ft_ultimate_ft();
+	int a;
+	int **b;
+
+	b = &a;
+	*b = a;
+	**b = *a;
+	ft_ultimate_ft(b);
 }
