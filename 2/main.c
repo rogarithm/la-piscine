@@ -6,12 +6,26 @@
 /*   By: sehukim <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/21 22:30:08 by sehukim           #+#    #+#             */
-/*   Updated: 2020/10/21 22:30:51 by sehukim          ###   ########.fr       */
+/*   Updated: 2020/10/22 08:19:18 by sh               ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	main(void)
+#include <stdio.h>
+
+void	ft_swap(int *a, int *b);
+
+int		main(void)
 {
-	ft_swap(int 3, int 5);
+	int *a;
+	int *b;
+	int val_a;
+	int val_b;
+	
+	val_a = 3;
+	val_b = 5;
+	a = &val_a;
+	b = &val_b;
+	ft_swap(a, b);
+	printf("%d %d\n", *a, *b);
 	return (0);
 }
