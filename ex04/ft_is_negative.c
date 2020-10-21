@@ -1,19 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_is_negative.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sh <marvin@42.fr>                          +#+  +:+       +#+        */
+/*   By: sehukim <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/10/20 18:23:32 by sh                #+#    #+#             */
-/*   Updated: 2020/10/20 23:16:57 by sh               ###   ########.fr       */
+/*   Created: 2020/10/19 20:45:22 by sehukim           #+#    #+#             */
+/*   Updated: 2020/10/21 17:51:10 by sehukim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void		ft_print_array(void);
+#include <unistd.h>
 
-int			main(void)
+void	ft_is_negative(int n)
 {
-	ft_print_array();
-	return (0);
+	char positive;
+	char negative;
+
+	positive = 'P';
+	negative = 'N';
+	if (n >= 0)
+	{
+		write(1, &positive, 1);
+	}
+	else
+	{
+		write(1, &negative, 1);
+	}
 }

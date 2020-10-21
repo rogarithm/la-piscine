@@ -1,18 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_print_alphabet.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sehukim <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/10/19 20:49:09 by sehukim           #+#    #+#             */
-/*   Updated: 2020/10/20 18:19:43 by sh               ###   ########.fr       */
+/*   Created: 2020/10/17 11:53:04 by sehukim           #+#    #+#             */
+/*   Updated: 2020/10/21 17:48:21 by sehukim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_is_negative(int n);
+#include <unistd.h>
 
-int		main(void)
+void	ft_print_alphabet(void)
 {
-	ft_is_negative(-20);
+	char *c;
+
+	c = "abcdefghijklmnopqrstuvwxyz";
+	write(1, c, 26);
 }
