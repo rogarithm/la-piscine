@@ -6,17 +6,18 @@
 /*   By: sehukim <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/21 22:42:02 by sehukim           #+#    #+#             */
-/*   Updated: 2020/10/22 10:17:02 by sh               ###   ########.fr       */
+/*   Updated: 2020/10/22 20:42:22 by sh               ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include <stdio.h>
 
 int		ft_strlen(char *str);
 
 int		main(void)
 {
-	char *str;
-
-	str = "what is this?";
-	ft_strlen(str);
+	char str[] = {"abcde"};
+	int a = ft_strlen(str);
+	printf("%d\n",a);
 	return (0);
 }
