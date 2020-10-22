@@ -6,13 +6,20 @@
 /*   By: sehukim <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/21 22:21:07 by sehukim           #+#    #+#             */
-/*   Updated: 2020/10/21 22:48:01 by sehukim          ###   ########.fr       */
+/*   Updated: 2020/10/22 16:58:26 by sh               ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdio.h>
+
 void	ft_ft(int *nbr);
 
-int	main(void)
+int		main(void)
 {
-	ft_ft();
+	int a;
+	int *b;
+
+	b = &a;
+	ft_ft(b);
+	printf("%d should be 42\n", *b);
 }
