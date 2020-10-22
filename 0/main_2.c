@@ -6,15 +6,13 @@
 /*   By: sh <marvin@42.fr>                          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/22 14:00:53 by sh                #+#    #+#             */
-/*   Updated: 2020/10/22 16:22:42 by sh               ###   ########.fr       */
+/*   Updated: 2020/10/22 16:47:43 by sh               ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include	<stdio.h>
 
 char	*ft_strcpy_2(char *dest, char *src);
-
-int		str_len(char *src);
 
 int		main(void)
 {
