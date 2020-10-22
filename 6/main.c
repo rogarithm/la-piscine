@@ -6,14 +6,17 @@
 /*   By: sehukim <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/21 22:42:02 by sehukim           #+#    #+#             */
-/*   Updated: 2020/10/21 22:43:26 by sehukim          ###   ########.fr       */
+/*   Updated: 2020/10/22 10:17:02 by sh               ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_strlen(char *str);
+int		ft_strlen(char *str);
 
-int	main(void)
+int		main(void)
 {
-	ft_strlen(&"abcd");
+	char *str;
+
+	str = "what is this?";
+	ft_strlen(str);
 	return (0);
 }
