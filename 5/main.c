@@ -6,7 +6,7 @@
 /*   By: sehukim <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/21 22:38:51 by sehukim           #+#    #+#             */
-/*   Updated: 2020/10/22 09:43:42 by sh               ###   ########.fr       */
+/*   Updated: 2020/10/22 20:03:59 by sh               ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,7 @@ void	ft_putstr(char *str);
 
 int	main(void)
 {
-	char *str;
-
-	str = "abcd";
+	char str[] = {"i am a string"};
 	ft_putstr(str);
 	return (0);
 }
