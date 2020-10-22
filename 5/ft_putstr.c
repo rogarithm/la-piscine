@@ -6,11 +6,13 @@
 /*   By: sehukim <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/21 22:37:37 by sehukim           #+#    #+#             */
-/*   Updated: 2020/10/21 22:39:49 by sehukim          ###   ########.fr       */
+/*   Updated: 2020/10/22 09:44:35 by sh               ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_putchar(char *str);
+#include <unistd.h>
+
+void	ft_putstr(char *str)
 {
-	write(1, str, sizeof(*str));
+	write(1, str, sizeof(str));
 }
