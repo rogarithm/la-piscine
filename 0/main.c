@@ -3,32 +3,33 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sh <marvin@42.fr>                          +#+  +:+       +#+        */
+/*   By: sehukim <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/10/22 14:00:53 by sh                #+#    #+#             */
-/*   Updated: 2020/10/22 14:17:36 by sh               ###   ########.fr       */
+/*   Created: 2020/10/25 21:07:32 by sehukim           #+#    #+#             */
+/*   Updated: 2020/10/25 21:09:56 by sehukim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+char	*ft_strcpy(char *dest, char *src);
+
 #include	<stdio.h>
 
-char	*ft_strcpy(char *dest, char *src);
+char	*ft_strcpy_2(char *dest, char *src);
 
 int		main(void)
 {
-	char dest1[20];
-	char dest2[20];
-	char *dest3;
-	char *src;
+	char dest[] = "bcd"; 
+	char src[] = "a"; 
 
-	src = "BlockDMask";
-	dest3 = "i am fifteenth";
-
-	ft_strcpy(dest1, src);
-	ft_strcpy(dest2, src);
-	ft_strcpy(dest3, src);
-
-	printf("case1 : %c\n", *dest1);
-	printf("case3 : %c\n", *dest3);
-}
+	char dest2[] = "bcd";
+	char src2[] = "aef";
 	
+	char dest3[] = "bcd";
+	char src3[] = "aefpl";
+	ft_strcpy(dest, src);
+	printf("case1 : %s should be a\n", dest);
+	ft_strcpy(dest2, src2);
+	printf("case2 : %s should be aef\n", dest2);
+	ft_strcpy(dest3, src3);
+	printf("case3 : %s should be aefpl\n", dest3);
+}
