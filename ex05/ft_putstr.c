@@ -6,7 +6,7 @@
 /*   By: sehukim <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/21 22:37:37 by sehukim           #+#    #+#             */
-/*   Updated: 2020/10/22 20:04:40 by sh               ###   ########.fr       */
+/*   Updated: 2020/10/26 16:36:39 by sehukim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	ft_putstr(char *str)
 	int counter;
 
 	counter = 0;
-	while(str[counter])
+	while (str[counter])
 	{
 		write(1, &str[counter], 1);
 		counter++;
