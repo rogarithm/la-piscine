@@ -1,23 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_ultimate_div_mod.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sehukim <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/10/21 22:40:47 by sehukim           #+#    #+#             */
-/*   Updated: 2020/10/25 15:42:38 by sehukim          ###   ########.fr       */
+/*   Created: 2020/10/21 22:34:56 by sehukim           #+#    #+#             */
+/*   Updated: 2020/10/22 19:43:43 by sh               ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strlen(char *str)
+void	ft_ultimate_div_mod(int *a, int *b)
 {
-	int i;
+	int temp_a;
+	int temp_b;
+	int mod;
+	int remainder;
 
-	i = 0;
-	while (str[i] != 0)
-	{
-		i++;
-		return (i);
-	}
+	temp_a = *a;
+	temp_b = *b;
+	mod = temp_a / temp_b;
+	remainder = temp_a % temp_b;
+	*a = mod;
+	*b = remainder;
 }

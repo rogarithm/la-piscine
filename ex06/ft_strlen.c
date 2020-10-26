@@ -1,32 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sehukim <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/10/21 22:35:54 by sehukim           #+#    #+#             */
-/*   Updated: 2020/10/25 15:23:26 by sehukim          ###   ########.fr       */
+/*   Created: 2020/10/21 22:40:47 by sehukim           #+#    #+#             */
+/*   Updated: 2020/10/22 20:16:03 by sh               ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-
-void	(ft_ultimate_div_mod(int *a, int *b));
-
-int	main(void)
+int	ft_strlen(char *str)
 {
-	int a;
-	int b;
-	int *ptr1;
-	int *ptr2;
-
-	a = 12;
-	b = 10;
-	ptr1 = &a;
-	ptr2 = &b;
-	printf("when we put %d and %d as input, ", a, b);
-	ft_ultimate_div_mod(ptr1, ptr2);
-	printf("we get result %d and %d as mod and remainder.", *ptr1, *ptr2);
-	return (0);
+	int i;
+	
+	i = 0;
+	while (str[i])
+	{
+		i++;
+	}
+	return i;
 }

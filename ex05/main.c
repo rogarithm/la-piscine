@@ -1,22 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_swap.c                                          :+:      :+:    :+:   */
+/*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sehukim <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/10/21 22:28:22 by sehukim           #+#    #+#             */
-/*   Updated: 2020/10/25 15:01:43 by sehukim          ###   ########.fr       */
+/*   Created: 2020/10/21 22:38:51 by sehukim           #+#    #+#             */
+/*   Updated: 2020/10/22 20:03:59 by sh               ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_swap(int *a, int *b)
-{
-	int get_a_to_b;
-	int get_b_to_a;
+void	ft_putstr(char *str);
 
-	get_a_to_b = *a;
-	get_b_to_a = *b;
-	*b = get_a_to_b;
-	*a = get_b_to_a;
+int	main(void)
+{
+	char str[] = {"i am a string"};
+	ft_putstr(str);
+	return (0);
 }

@@ -1,17 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_div_mod.c                                       :+:      :+:    :+:   */
+/*   ft_ultimate_ft.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sehukim <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/10/21 22:31:50 by sehukim           #+#    #+#             */
-/*   Updated: 2020/10/25 15:16:04 by sehukim          ###   ########.fr       */
+/*   Created: 2020/10/21 22:24:40 by sehukim           #+#    #+#             */
+/*   Updated: 2020/10/22 07:44:41 by sh               ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_div_mod(int a, int b, int *div, int *mod)
+/*
+** to declare **ptr, what I should do?
+** **ptr is a value pointed by *ptr.
+**
+** If every middle value should be declared,
+** should I declare the pointer nine times?
+*/
+
+void		ft_ultimate_ft(int *********ptr)
 {
-	*div = a / b;
-	*mod = a % b;
+	*********ptr = 42;
 }
