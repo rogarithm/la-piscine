@@ -6,7 +6,7 @@
 /*   By: sehukim <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/21 22:35:54 by sehukim           #+#    #+#             */
-/*   Updated: 2020/10/22 19:46:52 by sh               ###   ########.fr       */
+/*   Updated: 2020/10/26 16:32:58 by sehukim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,9 @@ int		main(void)
 	int v_of_2;
 
 	v_of_1 = 12;
-	v_of_2 = 10;
+	v_of_2 = 10;	
+	p1 = &v_of_1;
+	p2 = &v_of_2;
 	printf("When we put arguments %d & %d, then ", v_of_1, v_of_2);
 	ft_ultimate_div_mod(p1, p2);
 	printf("the result should be %d & %d. second is remainder.\n", *p1, *p2);
