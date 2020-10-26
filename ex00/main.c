@@ -6,15 +6,16 @@
 /*   By: sehukim <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/25 21:07:32 by sehukim           #+#    #+#             */
-/*   Updated: 2020/10/25 21:09:56 by sehukim          ###   ########.fr       */
+/*   Updated: 2020/10/26 18:39:34 by sehukim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 char	*ft_strcpy(char *dest, char *src);
+int		str_len(char *str);
 
 #include	<stdio.h>
 
-char	*ft_strcpy_2(char *dest, char *src);
+char	*ft_strcpy(char *dest, char *src);
 
 int		main(void)
 {
@@ -31,5 +32,6 @@ int		main(void)
 	ft_strcpy(dest2, src2);
 	printf("case2 : %s should be aef\n", dest2);
 	ft_strcpy(dest3, src3);
-	printf("case3 : %s should be aefpl\n", dest3);
+	printf("case3 : %s should be aef\n", dest3);
+	return (0);
 }
