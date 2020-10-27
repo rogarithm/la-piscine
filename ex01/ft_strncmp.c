@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   test0.c                                            :+:      :+:    :+:   */
+/*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sehukim <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/26 22:49:07 by sehukim           #+#    #+#             */
-/*   Updated: 2020/10/27 00:28:24 by sehukim          ###   ########.fr       */
+/*   Updated: 2020/10/27 21:39:04 by sh               ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,44 +22,40 @@ int		str_len(char *str)
 	return (counter);
 }
 
-int		recur(int c, char *s1, char *s2)
-{
-	while (s1[c] != '\0')
-	{
-		if (s1[c] == '\0')
-			return (0);
-		else
-		{
-			if (s1[c] == s2[c])
-			recur(++c, s1, s2);
-			else if (s1[c] > s2[c])
-				return (1);
-			else
-				return (-1);
-		}
-	}
-	return (1);
-}
-
 int		ft_strcmp(char *s1, char *s2)
 {
 	int count;
-	int s1_len;
-	int s2_len;
 
-	s1_len = str_len(s1);
-	s2_len = str_len(s2);
 	count = 0;
-	if (s1_len == s2_len)
+	while ((s1[count] != '\0') && (s2[count] != '\0')) 
 	{
-		recur(count, s1, s2);
-	}
-	else
-	{
-		if (s1_len > s2_len)
-			return (1);
+		if ((s1[count] > s2[count]) || (s1[count] < s2[count]))
+			return (s1[count] - s2[count]);
 		else
-			return (-1);
+			count++;
 	}
-	return (0);
+	return (s1[count] - s2[count]);
+}
+
+int		ft_strncmp(char *s1, char *s2, unsigned int n)
+{
+	unsigned int shorter_len;
+	unsigned int accumulator;
+
+	accumulator = 0;
+	if (str_len(s1) >= str_len(s2))
+		shorter_len = str_len(s2);
+	else
+		shorter_len = str_len(s1);
+	if (shorter_len <= n)
+		while (accumulator != shorter_len)
+		{
+			ft_strcmp(s1, s2);
+		}
+	else
+		while (accumulator != n)
+		{
+			ft_strcmp(s1, s2);
+		}
+		return (s1[accumulator] - s2[accumulator]);
 }
