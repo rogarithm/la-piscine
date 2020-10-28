@@ -10,7 +10,7 @@ int main(void)
 	
 	char dests[40] = "I love ";
 	char srcs[] = "the way you smile at me.";
-	ft_strncat(dest, src, 7);
-	printf("%s\n %s", dest, strncat(dests, srcs, 7));
+	ft_strncat(dest, src, 0);
+	printf("%s\n %s", dest, strncat(dests, srcs, 0));
 	return (0);
 }

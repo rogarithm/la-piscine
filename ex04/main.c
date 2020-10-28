@@ -4,8 +4,8 @@
 int main()
 {
    //initializing character pointer
-   char *str1 = "Don't panic!";
-   char *str2 = "pan";
+   char *str1 = "";
+   char *str2 = "";
 
    //displaying both string
    printf("str1 = %s\n\n", str1);
