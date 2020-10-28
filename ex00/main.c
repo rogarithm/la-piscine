@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sehukim <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: sh <marvin@42.fr>                          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/10/26 23:28:55 by sehukim           #+#    #+#             */
-/*   Updated: 2020/10/27 04:47:01 by sehukim          ###   ########.fr       */
+/*   Created: 2020/10/27 20:54:59 by sh                #+#    #+#             */
+/*   Updated: 2020/10/27 20:57:57 by sh               ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 #include <string.h>
 
 int		str_len(char *str);
-int		recur(int c, char *s1, char *s2);
 int		ft_strcmp(char *s1, char *s2);
+int		ft_strncmp(char *s1, char *s2, unsigned int n);
 
 int main(void)
 {
