@@ -1,61 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   refine.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sehukim <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: sh <marvin@42.fr>                          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/10/26 22:49:07 by sehukim           #+#    #+#             */
-/*   Updated: 2020/10/27 21:39:04 by sh               ###   ########.fr       */
+/*   Created: 2020/10/27 22:15:57 by sh                #+#    #+#             */
+/*   Updated: 2020/10/28 15:44:53 by sehukim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-int		str_len(char *str)
-{
-	int counter;
-
-	counter = 0;
-	while (str[counter] != '\0')
-	{
-		counter++;
-	}
-	return (counter);
-}
-
-int		ft_strcmp(char *s1, char *s2)
+/* if we put (n_count < n), in case there's more chars left,
+** the last count value returns the s1[]-s2[] value of n+1th.
+** thus we need to sub 1 from n, or some other action
+** causing the same effect.
+*/
+int		ft_strncmp(char *s1, char *s2, unsigned int n)
 {
 	int count;
+	unsigned int n_count;
 
 	count = 0;
-	while ((s1[count] != '\0') && (s2[count] != '\0')) 
+	n_count = 0;
+	while (((s1[count] != '\0') && (s2[count] != '\0')) && (n_count < n - 1))
 	{
-		if ((s1[count] > s2[count]) || (s1[count] < s2[count]))
+		if (s1[count] != s2[count])
 			return (s1[count] - s2[count]);
 		else
 			count++;
+			n_count++;
 	}
 	return (s1[count] - s2[count]);
-}
-
-int		ft_strncmp(char *s1, char *s2, unsigned int n)
-{
-	unsigned int shorter_len;
-	unsigned int accumulator;
-
-	accumulator = 0;
-	if (str_len(s1) >= str_len(s2))
-		shorter_len = str_len(s2);
-	else
-		shorter_len = str_len(s1);
-	if (shorter_len <= n)
-		while (accumulator != shorter_len)
-		{
-			ft_strcmp(s1, s2);
-		}
-	else
-		while (accumulator != n)
-		{
-			ft_strcmp(s1, s2);
-		}
-		return (s1[accumulator] - s2[accumulator]);
 }
