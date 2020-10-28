@@ -6,7 +6,7 @@
 /*   By: sehukim <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/27 02:32:19 by sehukim           #+#    #+#             */
-/*   Updated: 2020/10/28 20:28:31 by sehukim          ###   ########.fr       */
+/*   Updated: 2020/10/28 22:17:11 by sehukim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,11 @@ char	*ft_strcat(char *dest, char *src)
 		{
 			dest++;
 		}
-		while ((*dest++ = *src++) != '\0')
-			;
+		while (*src)
+		{
+			*dest = *src;
+			dest++;
+			src++;
+		}
 	return (temp);
 }
