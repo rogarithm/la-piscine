@@ -6,7 +6,7 @@
 /*   By: sh <marvin@42.fr>                          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/22 14:47:00 by sh                #+#    #+#             */
-/*   Updated: 2020/10/26 22:37:25 by sehukim          ###   ########.fr       */
+/*   Updated: 2020/10/28 15:22:56 by sehukim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,35 +22,28 @@ unsigned int	str_len(char *str)
 	return (counter);
 }
 
-
 char			*ft_strncpy(char *dest, char *src, unsigned int n)
 {
 	unsigned int counter;
 	unsigned int src_len;
+	unsigned int dest_len;
 
 	counter = 0;
 	src_len = str_len(src);
-	if (n >= src_len)
+	dest_len = str_len(dest);
+	while (counter < n)
 	{
-		if (counter < src_len)
-			while (counter < src_len)
-			{
-				dest[counter] = src[counter];
-				counter++;
-			}
+		if ((counter >= src_len) && (src[counter] != 0))
+			dest[counter] = '\0';
 		else
-			while (counter < n)
-			{
-				dest[counter] = '\0';
-				counter++;
-			}
-	}
-	else 
-		while (counter < n)
-		{
 			dest[counter] = src[counter];
-			counter++;
-		}
+		counter++;
+	}
+	while (dest[counter])
+	{
+		dest[counter] = dest[counter];
+		counter++;
+	}
 	dest[counter] = '\0';
 	return (dest);
 }
