@@ -1,25 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   ft_ultimate_ft.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sehukim <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/10/21 22:37:37 by sehukim           #+#    #+#             */
-/*   Updated: 2020/10/22 20:04:40 by sh               ###   ########.fr       */
+/*   Created: 2020/10/21 22:24:40 by sehukim           #+#    #+#             */
+/*   Updated: 2020/10/26 16:23:09 by sehukim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+/*
+** to declare **ptr, what I should do?
+** **ptr is a value pointed by *ptr.
+**
+** If every middle value should be declared,
+** should I declare the pointer nine times?
+*/
 
-void	ft_putstr(char *str)
+void		ft_ultimate_ft(int *********ptr)
 {
-	int counter;
-
-	counter = 0;
-	while(str[counter])
-	{
-		write(1, &str[counter], 1);
-		counter++;
-	}
+	*********ptr = 42;
 }

@@ -1,24 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_ultimate_ft_2.c                                 :+:      :+:    :+:   */
+/*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sehukim <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/10/21 22:24:40 by sehukim           #+#    #+#             */
-/*   Updated: 2020/10/22 17:23:31 by sh               ###   ########.fr       */
+/*   Created: 2020/10/21 22:33:03 by sehukim           #+#    #+#             */
+/*   Updated: 2020/10/26 16:26:25 by sehukim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*
-** to declare **ptr, what I should do?
-** **ptr is a value pointed by *ptr.
-**
-** If every middle value should be declared,
-** should I declare the pointer nine times?
-*/
+#include <stdio.h>
 
-void		ft_ultimate_ft_2(int **ptr)
+void	ft_div_mod(int a, int b, int *div, int *mod);
+
+int		main(void)
 {
-	**ptr = 42;
+	int *div;
+	int *mod;
+	int a;
+	int b;
+
+	a = 12;
+	b = 10;
+	div = &a;
+	mod = &b;
+	printf("when a is %d, and b is %d, the result ", a, b);
+	ft_div_mod(12, 10, &a, &b);
+	printf("should be %d & %d\n", *div, *mod);
+	return (0);
 }

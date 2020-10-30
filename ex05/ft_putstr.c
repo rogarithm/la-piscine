@@ -1,26 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_ultimate_div_mod.c                              :+:      :+:    :+:   */
+/*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sehukim <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/10/21 22:34:56 by sehukim           #+#    #+#             */
-/*   Updated: 2020/10/22 19:43:43 by sh               ###   ########.fr       */
+/*   Created: 2020/10/21 22:37:37 by sehukim           #+#    #+#             */
+/*   Updated: 2020/10/26 16:36:39 by sehukim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_ultimate_div_mod(int *a, int *b)
-{
-	int temp_a;
-	int temp_b;
-	int mod;
-	int remainder;
+#include <unistd.h>
 
-	temp_a = *a;
-	temp_b = *b;
-	mod = temp_a / temp_b;
-	remainder = temp_a % temp_b;
-	*a = mod;
-	*b = remainder;
+void	ft_putstr(char *str)
+{
+	int counter;
+
+	counter = 0;
+	while (str[counter])
+	{
+		write(1, &str[counter], 1);
+		counter++;
+	}
 }

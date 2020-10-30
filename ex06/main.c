@@ -1,17 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_div_mod.c                                       :+:      :+:    :+:   */
+/*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sehukim <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/10/21 22:31:50 by sehukim           #+#    #+#             */
-/*   Updated: 2020/10/22 09:06:43 by sh               ###   ########.fr       */
+/*   Created: 2020/10/21 22:42:02 by sehukim           #+#    #+#             */
+/*   Updated: 2020/10/26 16:38:07 by sehukim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_div_mod(int a, int b, int *div, int *mod)
+#include <stdio.h>
+
+int		ft_strlen(char *str);
+
+int		main(void)
 {
-	*div = a / b;
-	*mod = a % b;
+	char str[] = {"abcde"};
+	int a = ft_strlen(str);
+	printf("%d\n",a);
+	return (0);
 }

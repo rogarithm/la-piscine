@@ -1,28 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main_2.c                                           :+:      :+:    :+:   */
+/*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sehukim <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/10/21 22:26:07 by sehukim           #+#    #+#             */
-/*   Updated: 2020/10/22 17:26:56 by sh               ###   ########.fr       */
+/*   Created: 2020/10/21 22:35:54 by sehukim           #+#    #+#             */
+/*   Updated: 2020/10/30 20:45:30 by sh               ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdio.h>
 
-#include	<stdio.h>
-
-void	ft_ultimate_ft_2(int **nbr);
+void	ft_ultimate_div_mod(int *a, int *b);
 
 int		main(void)
 {
-	int val;
-	int *mid_pt;
-	int **tip;
-	
-	mid_pt = &val;
-	tip = &mid_pt;
-	ft_ultimate_ft_2(tip);
-	printf("%d should be 42\n", **tip);
+	int *p1;
+	int *p2;
+	int v_of_1;
+	int v_of_2;
+
+	v_of_1 = 12;
+	v_of_2 = 10;
+	p1 = &v_of_1;
+	p2 = &v_of_2;
+	printf("When we put arguments %d & %d, then ", v_of_1, v_of_2);
+	ft_ultimate_div_mod(p1, p2);
+	printf("the result should be %d & %d. second is remainder.\n", *p1, *p2);
+	return (0);
 }
