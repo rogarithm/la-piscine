@@ -6,7 +6,7 @@
 /*   By: sehukim <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/26 23:28:55 by sehukim           #+#    #+#             */
-/*   Updated: 2020/10/27 22:18:13 by sh               ###   ########.fr       */
+/*   Updated: 2020/10/30 22:34:20 by sh               ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,8 @@ int main(void)
 	// case 1. s > n. swapping s1 and s2
 	char l[] = {"nice day!"};
 	char s[] = {"nice!"};
-	printf("%d should be %d\n", ft_strncmp(l, s, 4), strncmp(l, s, 4));
-	printf("%d should be %d\n", ft_strncmp(s, l, 4), strncmp(s, l, 4));
+	printf("%d should be %d\n", ft_strncmp(l, s, 5), strncmp(l, s, 5));
+	printf("%d should be %d\n", ft_strncmp(s, l, 5), strncmp(s, l, 5));
 	printf("and above two should be equal.\n");
 
 	// case 2. s = n. when the strings not match

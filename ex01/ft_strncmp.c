@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   refine.c                                           :+:      :+:    :+:   */
+/*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sh <marvin@42.fr>                          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/10/27 22:15:57 by sh                #+#    #+#             */
-/*   Updated: 2020/10/28 15:44:53 by sehukim          ###   ########.fr       */
+/*   Created: 2020/10/30 22:13:05 by sh                #+#    #+#             */
+/*   Updated: 2020/10/30 22:45:46 by sh               ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 /* if we put (n_count < n), in case there's more chars left,
@@ -21,7 +21,8 @@ int		ft_strncmp(char *s1, char *s2, unsigned int n)
 
 	count = 0;
 	n_count = 0;
-	while (((s1[count] != '\0') && (s2[count] != '\0')) && (n_count < n - 1))
+//	while (((s1[count] != '\0') && (s2[count] != '\0')) && (n_count < n - 1))
+	while (((s1[count] != '\0') || (s2[count] != '\0')) && (n_count < n))
 	{
 		if (s1[count] != s2[count])
 			return (s1[count] - s2[count]);
@@ -29,5 +30,5 @@ int		ft_strncmp(char *s1, char *s2, unsigned int n)
 			count++;
 			n_count++;
 	}
-	return (s1[count] - s2[count]);
+	return (0);
 }
