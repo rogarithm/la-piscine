@@ -6,14 +6,15 @@
 /*   By: sh <marvin@42.fr>                          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/22 21:01:32 by sh                #+#    #+#             */
-/*   Updated: 2020/10/22 21:03:13 by sh               ###   ########.fr       */
+/*   Updated: 2020/10/30 21:21:29 by sh               ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+#include <stdio.h>
 
-void	ft_rev_int_tab(int *tab, int size);
+void ft_rev_int_tab(int *tab, int size);
 
 int	main(void)
 {
-	ft_rev_int_tab(tab, size);
+	int mark[3] = {1, 2, 3};
 	return (0);
 }

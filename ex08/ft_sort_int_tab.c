@@ -1,19 +1,14 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_rev_int_tab.c                                   :+:      :+:    :+:   */
+/*   ft_sort_int_tab.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sh <marvin@42.fr>                          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/10/22 21:03:20 by sh                #+#    #+#             */
-/*   Updated: 2020/10/30 21:21:09 by sh               ###   ########.fr       */
+/*   Created: 2020/10/30 21:36:13 by sh                #+#    #+#             */
+/*   Updated: 2020/10/30 21:51:58 by sh               ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-/*
- ** tab is a pointer, and size is a number of int inside an array
- ** what the pointer points? does size should always be equal to the array's size?
- */
 
 void	ft_swap(int *a, int *b)
 {
@@ -26,15 +21,23 @@ void	ft_swap(int *a, int *b)
 	*a = i_need_b;
 }
 
-void	ft_rev_int_tab(int *tab, int size)
+void	ft_sort_int_tab(int *tab, int size)
 {
-	int index;
+	int outer_index;
+	int inner_index;
 
-	index = 0;
-	while(index < (size + index + 1) / 2)
+	outer_index = 0;
+	inner_index = 0;
+	while (outer_index < size)
 	{
-		ft_swap(&tab[index], &tab[size]);
-		index++;
-		size--;
+		while (inner_index < size - 1)
+		{
+			if (tab[inner_index] > tab[inner_index + 1])
+			{
+				ft_swap(&tab[inner_index], &tab[inner_index + 1]);
+				inner_index++;
+			}
+		}
+		outer_index++;
 	}
 }
