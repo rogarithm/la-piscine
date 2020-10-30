@@ -6,7 +6,7 @@
 /*   By: sehukim <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/28 23:13:32 by sehukim           #+#    #+#             */
-/*   Updated: 2020/10/29 01:06:18 by sehukim          ###   ########.fr       */
+/*   Updated: 2020/10/30 22:57:46 by sh               ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 int	str_len(char *str)
@@ -28,15 +28,18 @@ int		ft_strncmp(char *s1, char *s2, unsigned int n)
 
 	count = 0;
 	n_count = 0;
-	while (((s1[count] != '\0') && (s2[count] != '\0')) && (n_count < n - 1))
+	//	while (((s1[count] != '\0') && (s2[count] != '\0')) && (n_count < n - 1))
+	while (((s1[count] != '\0') || (s2[count] != '\0')) && (n_count < n))
 	{
 		if (s1[count] != s2[count])
 			return (s1[count] - s2[count]);
 		else
+		{
 			count++;
-		n_count++;
+			n_count++;
+		}
 	}
-	return (s1[count] - s2[count]);
+	return (0); 
 }
 /* if we find the position of str that to_find matched, by using
  ** method of moving pointer itself, returning the pointer gives
