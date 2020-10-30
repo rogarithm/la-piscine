@@ -1,30 +1,47 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_is_negative.c                                   :+:      :+:    :+:   */
+/*   ft_print_comb.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sehukim <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/10/19 20:45:22 by sehukim           #+#    #+#             */
-/*   Updated: 2020/10/20 21:26:41 by sh               ###   ########.fr       */
+/*   Created: 2020/10/21 17:55:17 by sehukim           #+#    #+#             */
+/*   Updated: 2020/10/21 20:01:06 by sehukim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-void	ft_is_negative(int n)
+void	ft_print_comb(void)
 {
-	char positive;
-	char negative;
+	char a[3];
 
-	positive = 'P';
-	negative = 'N';
-	if (n >= 0)
+	a[0] = '0';
+	a[1] = '1';
+	a[2] = '2';
+	while (a[0] <= '7')
 	{
-		write(1, &positive, 1);
-	}
-	else
-	{
-		write(1, &negative, 1);
+		a[1] = a[0] + 1;
+		while (a[1] <= '8')
+		{
+			a[2] = a[1] + 1;
+			while (a[2] <= '9')
+			{
+				write(1, &a[0], 1);
+				write(1, &a[1], 1);
+				write(1, &a[2], 1);
+				if (a[0] == '7' && a[1] == '8' && a[2] == '9')
+				{
+					write(1, "", 1);
+				}
+				else
+				{
+					write(1, ", ", 2);
+				}
+				a[2]++;
+			}
+			a[1]++;
+		}
+		a[0]++;
 	}
 }
