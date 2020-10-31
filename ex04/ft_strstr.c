@@ -6,7 +6,7 @@
 /*   By: sehukim <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/28 23:13:32 by sehukim           #+#    #+#             */
-/*   Updated: 2020/10/31 23:38:30 by sehukim          ###   ########.fr       */
+/*   Updated: 2020/11/01 00:52:08 by sehukim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,6 @@ int		ft_strncmp(char *s1, char *s2, unsigned int n)
 
 	count = 0;
 	n_count = 0;
-	//	while (((s1[count] != '\0') && (s2[count] != '\0')) && (n_count < n - 1))
 	while (((s1[count] != '\0') || (s2[count] != '\0')) && (n_count < n))
 	{
 		if (s1[count] != s2[count])
@@ -40,7 +39,7 @@ int		ft_strncmp(char *s1, char *s2, unsigned int n)
 			n_count++;
 		}
 	}
-	return (0); 
+	return (0);
 }
 
 /*
@@ -71,17 +70,3 @@ char	*ft_strstr(char *str, char *to_find)
 	}
 	return (str);
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
