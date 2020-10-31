@@ -6,7 +6,7 @@
 /*   By: sh <marvin@42.fr>                          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/22 21:03:20 by sh                #+#    #+#             */
-/*   Updated: 2020/10/30 21:21:09 by sh               ###   ########.fr       */
+/*   Updated: 2020/10/31 20:08:41 by sehukim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,26 +15,17 @@
  ** what the pointer points? does size should always be equal to the array's size?
  */
 
-void	ft_swap(int *a, int *b)
-{
-	int i_need_a;
-	int i_need_b;
-
-	i_need_a = *a;
-	i_need_b = *b;
-	*b = i_need_a;
-	*a = i_need_b;
-}
-
 void	ft_rev_int_tab(int *tab, int size)
 {
 	int index;
+	int temp;
 
 	index = 0;
-	while(index < (size + index + 1) / 2)
+	while(index < (size - index) / 2)
 	{
-		ft_swap(&tab[index], &tab[size]);
+		temp = tab[index];
+		tab[index] = tab[size - 1];
+		tab[size - 1] = temp;
 		index++;
-		size--;
 	}
 }
