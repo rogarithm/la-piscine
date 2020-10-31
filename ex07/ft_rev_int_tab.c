@@ -6,7 +6,7 @@
 /*   By: sh <marvin@42.fr>                          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/22 21:03:20 by sh                #+#    #+#             */
-/*   Updated: 2020/10/31 21:06:26 by sehukim          ###   ########.fr       */
+/*   Updated: 2020/10/31 23:24:05 by sehukim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,8 +25,8 @@ void	ft_rev_int_tab(int *tab, int size)
 	while (index < (size - index) / 2)
 	{
 		temp = tab[index];
-		tab[index] = tab[size - 1];
-		tab[size - 1] = temp;
+		tab[index] = tab[size - index - 1];
+		tab[size - index - 1] = temp;
 		index++;
 	}
 }
