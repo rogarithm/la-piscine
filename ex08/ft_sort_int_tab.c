@@ -6,7 +6,7 @@
 /*   By: sh <marvin@42.fr>                          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/30 21:36:13 by sh                #+#    #+#             */
-/*   Updated: 2020/10/31 21:03:33 by sehukim          ###   ########.fr       */
+/*   Updated: 2020/10/31 21:06:54 by sehukim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ void	ft_sort_int_tab(int *tab, int size)
 			{
 				temp = tab[inner_index];
 				tab[inner_index] = tab[inner_index + 1];
-				tab[inner_index + 1] = temp;	
+				tab[inner_index + 1] = temp;
 			}
 			inner_index++;
 		}
