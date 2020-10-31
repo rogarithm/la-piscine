@@ -1,28 +1,25 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: sehukim <marvin@42.fr>                     +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/10/27 03:28:54 by sehukim           #+#    #+#             */
-/*   Updated: 2020/10/28 20:38:06 by sehukim          ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
+#include <stdio.h>
 #include <stdio.h>
 #include <string.h>
 
-char *ft_strcat(char* dest, char *src);
+unsigned int ft_strlcat(char *dest, char *src, unsigned int size);
 
 int main(void)
 {
-	char dest[40] = "I love ";
-	char src[] = "your way of smile.";
+	char dest[20] = "Help ";
+	char src[] = "me please!";
 	
-	char dests[40] = "I love ";
-	char srcs[] = "your way of smile.";
-	ft_strcat(dest, src);
-	printf("%s\n %s", dest, strcat(dests, srcs));
+	char dest2[20] = "Help ";
+	char src2[] = "me please!";
+
+	char dest3[20] = "Help ";
+	char src3[] = "me please!";
+	
+	char dest4[20] = "Help ";
+	char src4[] = "me please!";
+	printf("%u should be %lu\n", ft_strlcat(dest, src, 11), strlcat(dest, src, 11));
+	printf("%u should be %lu\n", ft_strlcat(dest2, src2, 6), strlcat(dest2, src2, 6));
+	printf("%u should be %lu\n", ft_strlcat(dest3, src3, 2), strlcat(dest3, src3, 2));
+	printf("%u should be %lu\n", ft_strlcat(dest4, src4, 1), strlcat(dest4, src4, 1));
 	return (0);
 }
