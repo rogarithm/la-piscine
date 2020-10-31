@@ -6,7 +6,7 @@
 /*   By: sehukim <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/28 23:13:32 by sehukim           #+#    #+#             */
-/*   Updated: 2020/10/31 21:31:57 by sehukim          ###   ########.fr       */
+/*   Updated: 2020/10/31 23:38:30 by sehukim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,15 +57,31 @@ char	*ft_strstr(char *str, char *to_find)
 {
 	int find_len;
 
-	if (*to_find == '\0')
+	if (*str == '\0')
 		return (0);
+	else if (*to_find == '\0')
+		return (str);
 	find_len = str_len(to_find);
 	while (*str)
 	{
 		if ((*str == *to_find) &&
 				(ft_strncmp(str, to_find, find_len) == 0))
 			return (str);
-		ft_strstr(str++, to_find);
+		ft_strstr(++str, to_find);
 	}
 	return (str);
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
