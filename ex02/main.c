@@ -1,23 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sehukim <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/10/31 14:52:10 by sehukim           #+#    #+#             */
-/*   Updated: 2020/11/01 17:33:22 by sh               ###   ########.fr       */
+/*   Created: 2020/10/31 12:35:07 by sehukim           #+#    #+#             */
+/*   Updated: 2020/10/31 14:43:31 by sehukim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strlen(char *str)
-{
-	int length_counter;
+#include <unistd.h>
 
-	length_counter = 0;
-	while (*str)
-	{
-		length_counter++;
-	}
-	return (length_counter);
+void	ft_putnbr(int nb);
+
+int	main(void)
+{
+	ft_putnbr(-2147483648);
+	write(1, "\n", 1);
+	ft_putnbr(12345);
+	write(1, "\n", 1);
+	ft_putnbr(-12345);
+	return (0);
 }

@@ -3,34 +3,44 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sh <marvin@42.fr>                          +#+  +:+       +#+        */
+/*   By: sehukim <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/10/29 20:12:34 by sh                #+#    #+#             */
-/*   Updated: 2020/10/29 20:31:34 by sh               ###   ########.fr       */
+/*   Created: 2020/10/31 14:54:19 by sehukim           #+#    #+#             */
+/*   Updated: 2020/11/01 17:32:51 by sh               ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <unistd.h>
+
 int	ft_strlen(char *str)
 {
-	int length_counter;
+	int counter;
 
-	length_counter = 0;
+	counter = 0;
 	while (*str)
 	{
-		length_counter++;
+		counter++;
+		str++;
 	}
-	return (length_counter);
+	return (counter);
+}
+
+void	ft_putchar(char c)
+{
+	write(1, &c, 1);
 }
 
 void	ft_putstr(char *str)
 {
-	int position;
+	int i;
+	int length;
 
-	position = 0;
-	while (position < ft_strlen(str))
+	i = 0;
+	length = ft_strlen(str);
+	while (i < length)
 	{
-		write(1, &str[position], 1);
-		position = position + 1;
+		ft_putchar(str[i]);
+		i++;	
 	}
+	ft_putchar('\0');
 }
-

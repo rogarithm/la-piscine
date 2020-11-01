@@ -1,23 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sehukim <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/10/31 14:52:10 by sehukim           #+#    #+#             */
-/*   Updated: 2020/11/01 17:33:22 by sh               ###   ########.fr       */
+/*   Created: 2020/10/31 14:58:35 by sehukim           #+#    #+#             */
+/*   Updated: 2020/10/31 15:33:46 by sehukim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strlen(char *str)
-{
-	int length_counter;
+void	ft_putstr(char *str);
 
-	length_counter = 0;
-	while (*str)
-	{
-		length_counter++;
-	}
-	return (length_counter);
+int	main(void)
+{
+	ft_putstr("what a nice day!");
+	return (0);
 }

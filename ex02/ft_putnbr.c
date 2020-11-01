@@ -5,40 +5,42 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: sh <marvin@42.fr>                          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/10/29 20:32:05 by sh                #+#    #+#             */
-/*   Updated: 2020/10/30 00:30:11 by sh               ###   ########.fr       */
+/*   Created: 2020/11/01 17:30:28 by sh                #+#    #+#             */
+/*   Updated: 2020/11/01 17:30:34 by sh               ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_putnbr(int nb)
+#include <unistd.h>
+
+void write_num(int a)
 {
-	if (nb < 0 && nb == minus_max_value)
-		print_that_value_exactly;
-	else if (nb < 0)
+	int div;
+	int mod;
+
+	div = a / 10;
+	mod = a % 10;
+	if (div > 10)
 	{
-		nb = -nb;
+		write_num(div);
 	}
-	while(div < 10)
-	{
-		div = nb / 10;
-		mod = nb % 10;
-		if (div > 10)
-		{	
-		divide again;
-		}
-		insert_mod_to_arr;
-		arr[counter] = mod;
-		counter++;
-	}
-	reverse_the_arrary;
+	else
+		write(1, &"0123456789"[div], 1);
+	write(1, &"0123456789"[mod], 1);
 }
 
-int *number_into_elems(int nb)
+void	ft_putnbr(int nb)
 {
-int div;
-int mod;
-
-div = nb / 10;
-mod = nb % 10;
-while (div > 10)
-
+	if (nb == -2147483648)
+	{
+		write(1, "-2147483648", 11);
+	}
+	else if (nb > 0)
+	{
+		write_num(nb);
+	}
+	else
+	{
+		write(1, "-", 1);
+		write_num(-nb);
+	}
+}

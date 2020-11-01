@@ -1,23 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sehukim <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/10/31 14:52:10 by sehukim           #+#    #+#             */
-/*   Updated: 2020/11/01 17:33:22 by sh               ###   ########.fr       */
+/*   Created: 2020/10/31 17:00:12 by sehukim           #+#    #+#             */
+/*   Updated: 2020/10/31 17:52:13 by sehukim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strlen(char *str)
-{
-	int length_counter;
+#include <stdio.h>
 
-	length_counter = 0;
-	while (*str)
-	{
-		length_counter++;
-	}
-	return (length_counter);
+int ft_atoi(char *str);
+
+int	main(void)
+{
+	ft_atoi(" ---+--+1234ab567");
+	printf("\n should be -1234");
+	return (0);
 }
