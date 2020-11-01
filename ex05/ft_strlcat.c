@@ -6,7 +6,7 @@
 /*   By: sehukim <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/01 00:55:33 by sehukim           #+#    #+#             */
-/*   Updated: 2020/11/01 04:02:01 by sehukim          ###   ########.fr       */
+/*   Updated: 2020/11/01 19:49:50 by sh               ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,12 +25,16 @@ int	str_len(char *str)
 unsigned int ft_strlcat(char *dest, char *src, unsigned int size)
 {
 	unsigned int dest_len;
+	unsigned int src_len;
 	unsigned int dest_count;
 	unsigned int src_count;
 
 	dest_len = str_len(dest);
+	src_len = str_len(src);
 	dest_count = 0;
 	src_count = 0;
+//	if (size <= (dest_len + 1))
+//		dest;
 	if (size >= (dest_len + 1))
 	{
 		while (dest[dest_count])
@@ -43,5 +47,5 @@ unsigned int ft_strlcat(char *dest, char *src, unsigned int size)
 		}
 	}
 	dest[dest_count] = '\0';
-	return (size - 1);
+	return (dest_len + src_len);
 }
