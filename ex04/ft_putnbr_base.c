@@ -6,9 +6,11 @@
 /*   By: sehukim <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/01 04:46:33 by sehukim           #+#    #+#             */
-/*   Updated: 2020/11/02 19:54:14 by sehukim          ###   ########.fr       */
+/*   Updated: 2020/11/02 22:06:05 by sehukim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include <unistd.h>
 
 int		str_len(char *str)
 {
@@ -21,26 +23,6 @@ int		str_len(char *str)
 		str++;
 	}
 	return (length);
-}
-
-int		ft_strncmp(char *s1, char *s2, unsigned int n)
-{
-	int				count;
-	unsigned int	n_count;
-
-	count = 0;
-	n_count = 0;
-	while (((s1[count] != '\0') || (s2[count] != '\0')) && (n_count < n))
-	{
-		if (s1[count] != s2[count])
-			return (s1[count] - s2[count]);
-		else
-		{
-			count++;
-			n_count++;
-		}
-	}
-	return (0);
 }
 
 /* compare if there's same element in str
@@ -79,7 +61,7 @@ int exceptions(char *base)
 {
 	int xbase;
 	// how long is the base?
-	xbase = strlen(base);
+	xbase = str_len(base);
 	// exceptional conditions
 	if (xbase == 0 || xbase == 1)
 		return (-1);
@@ -94,10 +76,44 @@ int exceptions(char *base)
 	return (0);
 }
 
+/*
+** convert integer number nbr based on the base.
+** If div of nbr is larger than base, it means
+** that it should be divided more, calling
+** itself until the div is lesser than the base.
+**
+** Store every divs and last mod into array a.
+*/
+char *divide_again(int nbr, char *base)
+{
+	int div;
+	int mod;
+	int counter;
+	char *a;
+
+	div = nbr / str_len(base);
+	mod = nbr % str_len(base);
+	counter = 0;
+	if (!(exceptions(base) == -1))
+	{
+		if (div > str_len(base))
+		{
+			divide_again(div, base);
+			counter++;
+		}
+		else
+			a[counter] = div;
+		a[counter + 1] = mod;
+	}
+	return (a);
+}
 
 void	ft_putnbr_base(int nbr, char *base)
 {
-	if (!(exceptions(base) == -1))
+	char *a;
+	while (*divide_again(nbr, base))
 	{
-
+		write(1, &base[*a], 1);
+		a++;
+	}
 }
