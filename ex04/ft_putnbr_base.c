@@ -6,7 +6,7 @@
 /*   By: sehukim <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/01 04:46:33 by sehukim           #+#    #+#             */
-/*   Updated: 2020/11/02 22:06:05 by sehukim          ###   ########.fr       */
+/*   Updated: 2020/11/02 22:56:53 by sehukim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,9 +43,12 @@ int	compare_elem(char *str)
 	while (base_point != (length - 1))
 	{	
 		while ((str[base_point] != str[base_point + how_far])
-				&& !(*str))
+				&& (!(*str)))
 		{
-			how_far++;
+			if (str[base_point] == str[base_point + how_far])
+				return (-1);
+			if (str[base_point] == str[base_point + how_far])
+				how_far++;
 		}
 		base_point++;
 	}
@@ -84,36 +87,36 @@ int exceptions(char *base)
 **
 ** Store every divs and last mod into array a.
 */
-char *divide_again(int nbr, char *base)
+char *divide_again(int nbr, char *base, char *a)
 {
 	int div;
 	int mod;
 	int counter;
-	char *a;
 
 	div = nbr / str_len(base);
 	mod = nbr % str_len(base);
 	counter = 0;
 	if (!(exceptions(base) == -1))
 	{
-		if (div > str_len(base))
+		while (div > str_len(base))
 		{
-			divide_again(div, base);
+			divide_again(div, base, a);
+			a[counter] = mod;
 			counter++;
 		}
-		else
-			a[counter] = div;
-		a[counter + 1] = mod;
+		a[counter] = mod;
+		a[counter + 1] = div;
 	}
 	return (a);
 }
 
 void	ft_putnbr_base(int nbr, char *base)
 {
-	char *a;
-	while (*divide_again(nbr, base))
+	char passed_a[32];
+	divide_again(nbr, base, passed_a);
+	while (*passed_a != '\0')
 	{
-		write(1, &base[*a], 1);
-		a++;
+		write(1, &base[*passed_a], 1);
+		passed_a++;
 	}
 }
