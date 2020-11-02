@@ -6,7 +6,7 @@
 /*   By: sehukim <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/31 17:00:12 by sehukim           #+#    #+#             */
-/*   Updated: 2020/10/31 17:52:13 by sehukim          ###   ########.fr       */
+/*   Updated: 2020/11/02 19:27:36 by sehukim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,8 @@ int ft_atoi(char *str);
 
 int	main(void)
 {
-	ft_atoi(" ---+--+1234ab567");
-	printf("\n should be -1234");
+	char str[] = " ---+--+1234ab567";
+	int result = ft_atoi(str);
+	printf("%d\n should be -1234", result);
 	return (0);
 }
