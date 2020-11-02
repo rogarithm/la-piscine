@@ -6,41 +6,52 @@
 /*   By: sh <marvin@42.fr>                          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/30 23:17:02 by sh                #+#    #+#             */
-/*   Updated: 2020/10/31 18:14:45 by sehukim          ###   ########.fr       */
+/*   Updated: 2020/11/02 14:36:14 by sehukim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
+void	ft_putchar(char c)
+{
+	write(1, &c, 1);
+}
+
 void	ft_print_comb2(void)
 {
-	char a[4];
+	int front;
+	int rear;
+	char a;
+	char b;
+	char c;
+	char d;
 
-	a[0] = '0';
-	while (a[0] <= '9')
-	{
-		a[1] = '0';
-		while (a[1] <= '9')
+	front = 0;
+	rear = 0;
+	a = front / 10 + '0';
+	b = front % 10 + '0';
+	c = rear / 10 + '0';
+	d = rear % 10 + '0';
+
+	while (front <= 98)
+	{	
+		while (rear <= 99)
 		{
-			a[2] = '0';
-			while (a[2] <= '9')
+			while ((a <= c) && (b < d))
 			{
-				a[3] = '1';
-				while ((a[3] <= '9') && (a[3] = a[1] + 1))
+				ft_putchar(a);
+				ft_putchar(b);
+				write(1, " ", 1);
+				ft_putchar(c);
+				ft_putchar(d);
+				if (!((a = '0') && (b = '0') && (c = '0') && (d = '1')))
 				{
-					write(1, &a[0], 1);
-					write(1, &a[1], 1);
-					write(1, " ", 1);
-					write(1, &a[2], 1);
-					write(1, &a[3], 1);
 					write(1, ",", 1);
 					write(1, " ", 1);
-					a[3]++;
 				}
-				a[2]++;
 			}
-			a[1]++;
+			rear++;
 		}
-		a[0]++;
+		front++;
 	}
 }
