@@ -6,7 +6,7 @@
 /*   By: sehukim <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/01 04:46:33 by sehukim           #+#    #+#             */
-/*   Updated: 2020/11/02 22:56:53 by sehukim          ###   ########.fr       */
+/*   Updated: 2020/11/02 23:20:59 by sehukim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -113,10 +113,13 @@ char *divide_again(int nbr, char *base, char *a)
 void	ft_putnbr_base(int nbr, char *base)
 {
 	char passed_a[32];
+	int i;
+
+	i = 0;
 	divide_again(nbr, base, passed_a);
-	while (*passed_a != '\0')
+	while (passed_a[i] != '\0')
 	{
-		write(1, &base[*passed_a], 1);
-		passed_a++;
+		write(1, &base[passed_a[i]], 1);
+		i++;
 	}
 }
