@@ -6,7 +6,7 @@
 /*   By: sehukim <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/01 04:46:33 by sehukim           #+#    #+#             */
-/*   Updated: 2020/11/01 21:28:07 by sh               ###   ########.fr       */
+/*   Updated: 2020/11/02 19:54:14 by sehukim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,12 +42,7 @@ int		ft_strncmp(char *s1, char *s2, unsigned int n)
 	}
 	return (0);
 }
-while (*base)
-{
-	if ((*base == '+') || (*base == '-'))
-	return (0);
-	compare_elem(base)
-}
+
 /* compare if there's same element in str
 ** starts with (0, 1) ... (0, len-1),
 ** to (len-2, len-1). If there's no matching,
@@ -75,20 +70,34 @@ int	compare_elem(char *str)
 	return (0);
 }
 
-void	ft_putnbr_base(int nbr, char *base)
+/*
+** check if the base is in the exceptional case.
+** If it is, return -1, and entire function quit.
+** If not, return 0, and let next function move on.
+*/
+int exceptions(char *base)
 {
 	int xbase;
-
+	// how long is the base?
 	xbase = strlen(base);
 	// exceptional conditions
 	if (xbase == 0 || xbase == 1)
 		return (-1);
-	if !(compare_elem(str) == 0)
+	if (!(compare_elem(base) == 0))
 		return (-1);
-	while (*str)
+	while (*base)
 	{
-		if (!((*str == '+') || (*str == '-')))
-			str++;
+		if (!((*base == '+') || (*base == '-')))
+			base++;
 		return (-1);
 	}
+	return (0);
+}
+
+
+void	ft_putnbr_base(int nbr, char *base)
+{
+	if (!(exceptions(base) == -1))
+	{
+
 }
