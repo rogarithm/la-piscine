@@ -6,7 +6,7 @@
 /*   By: sehukim <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/01 04:46:33 by sehukim           #+#    #+#             */
-/*   Updated: 2020/11/02 23:20:59 by sehukim          ###   ########.fr       */
+/*   Updated: 2020/11/03 00:05:37 by sehukim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,8 +73,11 @@ int exceptions(char *base)
 	while (*base)
 	{
 		if (!((*base == '+') || (*base == '-')))
+		{
 			base++;
-		return (-1);
+		}
+		else
+			return (-1);
 	}
 	return (0);
 }
@@ -100,8 +103,8 @@ char *divide_again(int nbr, char *base, char *a)
 	{
 		while (div > str_len(base))
 		{
-			divide_again(div, base, a);
 			a[counter] = mod;
+			divide_again(div, base, a);
 			counter++;
 		}
 		a[counter] = mod;
@@ -115,11 +118,11 @@ void	ft_putnbr_base(int nbr, char *base)
 	char passed_a[32];
 	int i;
 
-	i = 0;
+	i = str_len(passed_a);
 	divide_again(nbr, base, passed_a);
 	while (passed_a[i] != '\0')
 	{
 		write(1, &base[passed_a[i]], 1);
-		i++;
+		i--;
 	}
 }
