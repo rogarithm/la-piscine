@@ -6,7 +6,7 @@
 /*   By: sh <marvin@42.fr>                          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/30 23:17:02 by sh                #+#    #+#             */
-/*   Updated: 2020/11/02 14:36:14 by sehukim          ###   ########.fr       */
+/*   Updated: 2020/11/02 20:31:34 by sehukim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,37 +21,28 @@ void	ft_print_comb2(void)
 {
 	int front;
 	int rear;
-	char a;
-	char b;
-	char c;
-	char d;
 
 	front = 0;
-	rear = 0;
-	a = front / 10 + '0';
-	b = front % 10 + '0';
-	c = rear / 10 + '0';
-	d = rear % 10 + '0';
-
-	while (front <= 98)
-	{	
+	while (front <= 98) 	
+	{
+		rear = 0;
 		while (rear <= 99)
 		{
-			while ((a <= c) && (b < d))
+			ft_putchar((front / 10) + '0');
+			ft_putchar((front % 10) + '0');
+			write(1, " ", 1);
+			ft_putchar((rear / 10) + '0');
+			ft_putchar((rear % 10) + '0');
+			if (!((front == 98) && (rear == 99)))
 			{
-				ft_putchar(a);
-				ft_putchar(b);
+				write(1, ",", 1);
 				write(1, " ", 1);
-				ft_putchar(c);
-				ft_putchar(d);
-				if (!((a = '0') && (b = '0') && (c = '0') && (d = '1')))
-				{
-					write(1, ",", 1);
-					write(1, " ", 1);
-				}
 			}
 			rear++;
 		}
 		front++;
 	}
 }
+//&& ((front / 10) <= (rear / 10))
+//		&& ((front % 10) < (rear % 10)))	
+
