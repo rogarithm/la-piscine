@@ -6,7 +6,7 @@
 /*   By: sehukim <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/28 23:13:32 by sehukim           #+#    #+#             */
-/*   Updated: 2020/11/01 00:52:08 by sehukim          ###   ########.fr       */
+/*   Updated: 2020/11/02 11:26:28 by sehukim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,7 +57,7 @@ char	*ft_strstr(char *str, char *to_find)
 	int find_len;
 
 	if (*str == '\0')
-		return (0);
+		return (str);
 	else if (*to_find == '\0')
 		return (str);
 	find_len = str_len(to_find);
