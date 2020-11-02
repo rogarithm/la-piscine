@@ -6,18 +6,19 @@
 /*   By: sehukim <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/31 14:52:10 by sehukim           #+#    #+#             */
-/*   Updated: 2020/11/01 17:33:22 by sh               ###   ########.fr       */
+/*   Updated: 2020/10/31 15:33:41 by sehukim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_strlen(char *str)
 {
-	int length_counter;
+	int counter;
 
-	length_counter = 0;
+	counter = 0;
 	while (*str)
 	{
-		length_counter++;
+		counter++;
+		str++;
 	}
-	return (length_counter);
+	return (counter);
 }

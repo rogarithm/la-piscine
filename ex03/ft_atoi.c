@@ -6,7 +6,7 @@
 /*   By: sehukim <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/31 16:06:44 by sehukim           #+#    #+#             */
-/*   Updated: 2020/11/02 19:27:34 by sehukim          ###   ########.fr       */
+/*   Updated: 2020/10/31 17:52:12 by sehukim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,12 @@ int	ft_atoi(char *str)
 {
 	int i;
 	int count;
-	int cvtd_val;
+	int value;
 
 	i = 0;
 	count = 0;
-	cvtd_val = 0;
+	value = 0;
+	//(9 < str[i] < 13 || str[i] == 32)
 	while (((9 < str[i]) && (str[i] < 13)) || str[i] == 32)
 	{
 		i++;
@@ -33,15 +34,14 @@ int	ft_atoi(char *str)
 			i++;
 		}
 	}
-	
 	while (('0' <= str[i]) && (str[i] <= '9'))
 	{
-		cvtd_val = cvtd_val * 10;
-		cvtd_val = cvtd_val + (str[i] - '0');
+		value = value * 10;
+		value = value + (str[i] - '0');
 		i++;
 	}
 	if ((count % 2) == 0)
-		return (cvtd_val);
+		return (value);
 	else
-		return ((-1) * cvtd_val);
+		return ((-1) * value);
 }
