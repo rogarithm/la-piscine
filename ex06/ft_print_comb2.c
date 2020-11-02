@@ -6,7 +6,7 @@
 /*   By: sh <marvin@42.fr>                          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/30 23:17:02 by sh                #+#    #+#             */
-/*   Updated: 2020/11/02 20:31:34 by sehukim          ###   ########.fr       */
+/*   Updated: 2020/11/02 20:49:19 by sehukim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,9 +23,9 @@ void	ft_print_comb2(void)
 	int rear;
 
 	front = 0;
-	while (front <= 98) 	
+	while (front <= 98)
 	{
-		rear = 0;
+		rear = front + 1;
 		while (rear <= 99)
 		{
 			ft_putchar((front / 10) + '0');
@@ -43,6 +43,3 @@ void	ft_print_comb2(void)
 		front++;
 	}
 }
-//&& ((front / 10) <= (rear / 10))
-//		&& ((front % 10) < (rear % 10)))	
-
