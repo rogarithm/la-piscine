@@ -6,13 +6,13 @@
 /*   By: sehukim <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/31 11:30:54 by sehukim           #+#    #+#             */
-/*   Updated: 2020/10/31 17:59:43 by sehukim          ###   ########.fr       */
+/*   Updated: 2020/11/02 20:54:18 by sehukim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-void write_num(int a)
+void	write_num(int a)
 {
 	int div;
 	int mod;

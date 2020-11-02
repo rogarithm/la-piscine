@@ -6,11 +6,18 @@
 /*   By: sehukim <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/21 17:55:17 by sehukim           #+#    #+#             */
-/*   Updated: 2020/10/21 20:01:06 by sehukim          ###   ########.fr       */
+/*   Updated: 2020/11/02 21:06:12 by sehukim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
+
+void	print_num(char *a)
+{
+	write(1, &a[0], 1);
+	write(1, &a[1], 1);
+	write(1, &a[2], 1);
+}
 
 void	ft_print_comb(void)
 {
@@ -27,17 +34,11 @@ void	ft_print_comb(void)
 			a[2] = a[1] + 1;
 			while (a[2] <= '9')
 			{
-				write(1, &a[0], 1);
-				write(1, &a[1], 1);
-				write(1, &a[2], 1);
+				print_num(a);
 				if (a[0] == '7' && a[1] == '8' && a[2] == '9')
-				{
 					write(1, "", 1);
-				}
 				else
-				{
 					write(1, ", ", 2);
-				}
 				a[2]++;
 			}
 			a[1]++;
