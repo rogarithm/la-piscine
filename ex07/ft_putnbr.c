@@ -6,7 +6,7 @@
 /*   By: sehukim <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/31 11:30:54 by sehukim           #+#    #+#             */
-/*   Updated: 2020/11/02 20:54:18 by sehukim          ###   ########.fr       */
+/*   Updated: 2020/11/03 16:58:53 by sh               ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,4 +43,28 @@ void	ft_putnbr(int nb)
 		write(1, "-", 1);
 		write_num(-nb);
 	}
+}
+
+void ft_putnbr(int nb);
+int main(void)
+{
+    ft_putnbr(42);
+	write(1, "\n", 1);
+    ft_putnbr(2147483647);
+	write(1, "\n", 1);
+    ft_putnbr(-2147483648);
+	write(1, "\n", 1);
+    ft_putnbr(0);
+	write(1, "\n", 1);
+    ft_putnbr(-42);
+	write(1, "\n", 1);
+    ft_putnbr(1);
+	write(1, "\n", 1);
+    ft_putnbr(-1);
+	write(1, "\n", 1);
+    ft_putnbr(-1010);
+	write(1, "\n", 1);
+    ft_putnbr(1024);
+	write(1, "\n", 1);
+    return 0;
 }
