@@ -6,7 +6,7 @@
 /*   By: sehukim <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/01 04:46:33 by sehukim           #+#    #+#             */
-/*   Updated: 2020/11/03 17:22:14 by sh               ###   ########.fr       */
+/*   Updated: 2020/11/03 17:55:34 by sh               ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -90,26 +90,22 @@ int exceptions(char *base)
 **
 ** Store every divs and last mod into array a.
 */
-char *divide_again(int nbr, char *base, char *a)
+char *make_xbase_num(int nbr, char *base, char *a)
 {
 	int div;
 	int mod;
-	int counter;
+	int xbase;
 
-	div = nbr / str_len(base);
-	mod = nbr % str_len(base);
-	counter = 0;
-	if (!(exceptions(base) == -1))
+	xbase = str_len(base);
+	div = nbr / xbase;
+	mod = nbr % xbase; 
+	if (div >= xbase)
 	{
-		while (div > str_len(base))
-		{
-			a[counter] = mod;
-			divide_again(div, base, a);
-			counter++;
-		}
-		a[counter] = mod;
-		a[counter + 1] = div;
+		make_xbase_num(div, base, a);
 	}
+	else if (div > 0)
+		++a = div + '0';
+	a = mod + '0';
 	return (a);
 }
 
@@ -119,17 +115,30 @@ void	ft_putnbr_base(int nbr, char *base)
 	int i;
 
 	i = str_len(passed_a);
-	divide_again(nbr, base, passed_a);
-	while (passed_a[i] != '\0')
+	if (!(exceptions(base) == -1))
 	{
-		write(1, &base[passed_a[i]], 1);
-		i--;
+		make_xbase_num(nbr, base, passed_a);
+		while (passed_a[i])
+		{
+			write(1, &base[passed_a[i]], 1);
+			i--;
+		}
 	}
 }
 
 #include <stdio.h>
 #include <unistd.h>
 void ft_putnbr_base(int nbr, char *base);
+char *make_xbase_num(int nbr, char *base, char *a);
+int main(void)
+{
+	char passed_a[32];
+
+make_xbase_num(1, "01", passed_a);
+make_xbase_num(2, "01", passed_a);
+make_xbase_num(3, "01", passed_a);
+make_xbase_num(4, "01", passed_a);
+/*
 int main(void)
 {
 	ft_putnbr_base(1234567890, "0123456789");
@@ -178,3 +187,4 @@ int main(void)
 	write(1, "\n", 1);
 	return 0;
 }
+*/

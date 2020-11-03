@@ -6,13 +6,13 @@
 /*   By: sehukim <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/31 14:54:19 by sehukim           #+#    #+#             */
-/*   Updated: 2020/10/31 15:33:45 by sehukim          ###   ########.fr       */
+/*   Updated: 2020/11/03 18:15:44 by sh               ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-int	ft_strlen(char *str)
+int		ft_strlen(char *str)
 {
 	int counter;
 
@@ -40,8 +40,17 @@ void	ft_putstr(char *str)
 	while (i < length)
 	{
 		ft_putchar(str[i]);
-		i++;	
+		i++;
 	}
-	ft_putchar('\0');
 }
-
+/*
+void	ft_putstr(char *str);
+int main(void)
+{
+	ft_putstr("");
+	ft_putstr("\n");
+	ft_putstr("123456\n");
+	ft_putstr("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA\n");
+	return 0;
+}
+*/
