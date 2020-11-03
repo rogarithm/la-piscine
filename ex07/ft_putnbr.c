@@ -44,26 +44,3 @@ void	ft_putnbr(int nb)
 		write_num(-nb);
 	}
 }
-
-/*
-int main(void)
-{
-ft_putnbr(2);
-write(1, "\n", 1);
-ft_putnbr(10);
-write(1, "\n", 1);
-ft_putnbr(100);
-write(1, "\n", 1);
-ft_putnbr(1234);
-write(1, "\n", 1);
-ft_putnbr(-2);
-write(1, "\n", 1);
-ft_putnbr(-12);
-write(1, "\n", 1);
-ft_putnbr(-123);
-write(1, "\n", 1);
-ft_putnbr(-1234);
-write(1, "\n", 1);
-return 0;
-}
-*/
