@@ -6,24 +6,24 @@
 /*   By: sehukim <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/31 11:30:54 by sehukim           #+#    #+#             */
-/*   Updated: 2020/10/31 14:44:31 by sehukim          ###   ########.fr       */
+/*   Updated: 2020/11/03 17:03:33 by sh               ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-void write_num(int a)
+void	write_num(int a)
 {
 	int div;
 	int mod;
 
 	div = a / 10;
 	mod = a % 10;
-	if (div > 10)
+	if (div >= 10)
 	{
 		write_num(div);
 	}
-	else
+	else if (div > 0)
 		write(1, &"0123456789"[div], 1);
 	write(1, &"0123456789"[mod], 1);
 }
@@ -34,7 +34,7 @@ void	ft_putnbr(int nb)
 	{
 		write(1, "-2147483648", 11);
 	}
-	else if (nb > 0)
+	else if (nb >= 0)
 	{
 		write_num(nb);
 	}
