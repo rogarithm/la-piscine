@@ -6,7 +6,7 @@
 /*   By: sehukim <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/31 11:30:54 by sehukim           #+#    #+#             */
-/*   Updated: 2020/11/02 20:54:18 by sehukim          ###   ########.fr       */
+/*   Updated: 2020/11/03 16:41:48 by sh               ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,11 +19,11 @@ void	write_num(int a)
 
 	div = a / 10;
 	mod = a % 10;
-	if (div > 10)
+	if (div >= 10)
 	{
 		write_num(div);
 	}
-	else
+	else if (div > 0)
 		write(1, &"0123456789"[div], 1);
 	write(1, &"0123456789"[mod], 1);
 }
@@ -44,3 +44,26 @@ void	ft_putnbr(int nb)
 		write_num(-nb);
 	}
 }
+
+/*
+int main(void)
+{
+ft_putnbr(2);
+write(1, "\n", 1);
+ft_putnbr(10);
+write(1, "\n", 1);
+ft_putnbr(100);
+write(1, "\n", 1);
+ft_putnbr(1234);
+write(1, "\n", 1);
+ft_putnbr(-2);
+write(1, "\n", 1);
+ft_putnbr(-12);
+write(1, "\n", 1);
+ft_putnbr(-123);
+write(1, "\n", 1);
+ft_putnbr(-1234);
+write(1, "\n", 1);
+return 0;
+}
+*/
