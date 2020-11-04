@@ -6,10 +6,9 @@
 /*   By: sehukim <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/01 04:46:33 by sehukim           #+#    #+#             */
-/*   Updated: 2020/11/03 17:55:34 by sh               ###   ########.fr       */
+/*   Updated: 2020/11/04 11:37:28 by sehukim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 #include <unistd.h>
 
 int		str_len(char *str)
@@ -83,12 +82,12 @@ int exceptions(char *base)
 }
 
 /*
-** convert integer number nbr based on the base.
+** convert integer number into array of xbase_num.
 ** If div of nbr is larger than base, it means
-** that it should be divided more, calling
+** that it should be divided more, so call
 ** itself until the div is lesser than the base.
 **
-** Store every divs and last mod into array a.
+** Store every divs and last mod into an array.
 */
 char *make_xbase_num(int nbr, char *base, char *a)
 {
@@ -104,87 +103,27 @@ char *make_xbase_num(int nbr, char *base, char *a)
 		make_xbase_num(div, base, a);
 	}
 	else if (div > 0)
-		++a = div + '0';
-	a = mod + '0';
+	{
+		a++;
+		*a = div + '0';
+	}
+	*a = mod + '0';
 	return (a);
 }
 
 void	ft_putnbr_base(int nbr, char *base)
 {
-	char passed_a[32];
+	char passed_a[100];
 	int i;
 
 	i = str_len(passed_a);
 	if (!(exceptions(base) == -1))
 	{
 		make_xbase_num(nbr, base, passed_a);
-		while (passed_a[i])
+		while (i != 0)
 		{
 			write(1, &base[passed_a[i]], 1);
 			i--;
 		}
 	}
 }
-
-#include <stdio.h>
-#include <unistd.h>
-void ft_putnbr_base(int nbr, char *base);
-char *make_xbase_num(int nbr, char *base, char *a);
-int main(void)
-{
-	char passed_a[32];
-
-make_xbase_num(1, "01", passed_a);
-make_xbase_num(2, "01", passed_a);
-make_xbase_num(3, "01", passed_a);
-make_xbase_num(4, "01", passed_a);
-/*
-int main(void)
-{
-	ft_putnbr_base(1234567890, "0123456789");
-	write(1, "\n", 1);
-	ft_putnbr_base(65536, "01");
-	write(1, "\n", 1);
-	ft_putnbr_base(100000000, "0123456789ABCDEF");
-	write(1, "\n", 1);
-	ft_putnbr_base(2147438647, "0123456");
-	write(1, "\n", 1);
-	ft_putnbr_base(-2147438648, "01234");
-	write(1, "\n", 1);
-	ft_putnbr_base(2147438647, "0123456789ABCDEFGHIJKLMNOPQ");
-	write(1, "\n", 1);
-	write(1, "\n", 1);
-
-	ft_putnbr_base(1234567890, ")!@#$%^&*(");
-	write(1, "\n", 1);
-	ft_putnbr_base(65536, "OI");
-	write(1, "\n", 1);
-	ft_putnbr_base(100000000, "\'\"\?>.<,QWERT ABC");
-	write(1, "\n", 1);
-	ft_putnbr_base(2147438647, "aQqR Tt");
-	write(1, "\n", 1);
-	ft_putnbr_base(-2147438648, "=_|{}");
-	write(1, "\n", 1);
-	ft_putnbr_base(2147438647, "ZXCS DF12345;:'\"qwertyas@#$");
-	write(1, "\n", 1);
-
-	ft_putnbr_base(2147438647, "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz!@#$%^&*()_= ");
-	write(1, "\n", 1);
-	ft_putnbr_base(0, "!@#$");
-	write(1, "\n", 1);
-	write(1, "\nT1: ", 5);
-	ft_putnbr_base(12345, "1234563");
-	write(1, "\nT2: ", 5);
-	ft_putnbr_base(12345, "12345-64");
-	write(1, "\nT3: ", 5);
-	ft_putnbr_base(12345, "12345678+");
-	write(1, "\nT4: ", 5);
-	ft_putnbr_base(12345, "1");
-	write(1, "\nT5: ", 5);
-	ft_putnbr_base(12345, "");
-	write(1, "\nT6: ", 5);
-	ft_putnbr_base(12345, "a12356a7");
-	write(1, "\n", 1);
-	return 0;
-}
-*/
