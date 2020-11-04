@@ -6,20 +6,23 @@
 /*   By: sh <marvin@42.fr>                          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/03 19:49:31 by sh                #+#    #+#             */
-/*   Updated: 2020/11/03 19:54:19 by sh               ###   ########.fr       */
+/*   Updated: 2020/11/04 15:35:46 by sehukim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_iterative_power(int nb, int power)
 {
-	if (nb < 0)
+	int result;
+
+	result = 1;
+	if (power < 0)
 		return (0);
 	if (power == 0)
 		return (1);
-	while (power > 0)
+	while (power >= 1)
 	{
-		nb = nb * nb;
+		result = result * nb;
 		power = power - 1;
 	}
-	return (nb);
+	return (result);
 }
