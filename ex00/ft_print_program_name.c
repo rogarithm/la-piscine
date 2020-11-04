@@ -6,7 +6,7 @@
 /*   By: sehukim <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/04 16:42:35 by sehukim           #+#    #+#             */
-/*   Updated: 2020/11/04 17:54:44 by sehukim          ###   ########.fr       */
+/*   Updated: 2020/11/04 22:55:51 by sehukim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,19 +15,20 @@
 /*
 ** This program displays its own name.
 ** The name means the first element of argc, if there's more than one.
-**
-**
 */
+
 int	main(int argc, char **argv)
 {
 	int idx;
 
 	idx = 0;
 	if (argc >= 1)
-		while (*argv[0])
+	{
+		while (argv[0][idx])
 		{
-			write(1, argv[0][idx], 1);
+			write(1, &argv[0][idx], 1);
 			idx++;
 		}
+	}
 	return (0);
 }
